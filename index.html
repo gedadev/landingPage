@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Document</title>
+    <title>Trombones</title>
 </head>
 <body>
     <header id="header">
-        <!-- <img src="" alt="logo" id="header-img"> -->
-        <div id="header-img">
-            <i class="material-icons">audiotrack</i>
-            <p>Original Trombones</p>
-        </div>
         <nav id="nav-bar">
-            <ul>
-                <li class="nav-link"><a href="#features">Features</a></li>
-                <li class="nav-link"><a href="#video">How it works</a></li>
-                <li class="nav-link"><a href="#pricing">Pricing</a></li>
+            <div id="header-img">
+                <i class="material-icons">audiotrack</i>
+                <p>Original Trombones</p>
+            </div>
+            <ul class="nav-links">
+                <!-- <input type="checkbox" class="side-menu" id="side-menu">
+                <label class="icon-label" for="side-menu">&#9776;</label> -->
+                <div class="menu">
+                    <li class="nav-link"><a href="#features">Features</a></li>
+                    <li class="nav-link"><a href="#how-it-works">How it works</a></li>
+                    <li class="nav-link"><a href="#pricing">Pricing</a></li>
+                </div>
             </ul>
         </nav>
     </header>
     <main id="main">
-        <h1>Get your handcrafted trombone</h1>
+        <h1 id="title">Get your handcrafted trombone</h1>
         <section id="features">
             <div class="feature">
                 <div class="icon">
@@ -57,8 +60,9 @@
                 </div>
             </div>
         </section>
-        <section>
-            <iframe src="" frameborder="1" id="video" height="315"></iframe>
+        <section id="how-it-works">
+            <h1>How it works</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <section id="pricing">
             <div class="price-card">
@@ -87,7 +91,7 @@
             </div>
         </section>
         <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <label for="email">Get notice about new arrivals</label>
+            <label for="email">Get noticed about new arrivals</label>
             <input type="email" name="email" id="email" placeholder="Enter your email address">
             <input type="submit" value="GET STARTED" id="submit">
         </form>

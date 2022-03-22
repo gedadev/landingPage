@@ -3,10 +3,19 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(224, 224, 224);
 }
 
 /* Header */
@@ -15,9 +24,14 @@ body {
     top: 0;
     width: 100%;
     background-color: rgb(37, 37, 37);
-    display: flex;
-    justify-content: space-between;
     padding: 0 0 0 0;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 #header-img {
@@ -26,33 +40,210 @@ body {
 
 #header-img > * {
     margin: 0;
-    padding: 20px 0 20px 18px;
+    padding: 14px 0 10px 18px;
     color: rgb(255, 238, 217);
-    font-size: 42px;
+    font-size: 32px;
 }
 
-#nav-bar {
+#nav-bar .menu {
     display: flex;
-    align-items: center;
+    gap: 1em;
 }
 
 #nav-bar ul {
     display: flex;
-    margin: 0;
-    list-style-type: none;
-    padding-right: 20px;
-}
+    align-items: center;
+}    
 
-#nav-bar ul li {
+#nav-bar .menu li {
     padding-right: 22px;
 }
 
-a {
-    text-decoration: none;
+#nav-bar a {
     color: rgb(255, 238, 217);
 }
 
+
 /* Main */
-#main {
-    margin-top: 100px;
+@media (min-width: 1000px){
+    #main {
+        margin-top: 80px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px){
+    #main {
+        margin-top: 80px;
+        width: 95%;
+    }
+}
+
+#title {
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+}
+
+#features {
+    padding-top: 50px;
+}
+
+.feature {
+    display: flex;
+}
+
+.feature .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature .icon i{
+    font-size: 50px;
+    margin: 30px;
+}
+
+.feature .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature .description > * {
+    padding: 5px 0 0 10px;
+    margin: 0;
+}
+
+#how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+#how-it-works h1 {
+    font-size: 32px;
+    color: rgb(41, 41, 41);
+}
+
+#pricing {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+#pricing .price-card {
+    background-color: rgb(255, 252, 236);
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 12px 0 18px 0;
+    margin-top: 24px;
+}
+
+#pricing .price-card > * {
+    margin: 15px 0 10px;
+    font-size: 24px;
+    color: rgb(41, 41, 41);
+}
+
+#pricing .price-card p {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+}
+
+#pricing .price-card button {
+    margin-top: 12px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(170, 170, 170);
+    color: rgb(32, 32, 32);
+    padding: 9px 12px 5px;
+}
+
+#form {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(58, 58, 58);
+}
+
+#form #email {
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding: 6px 10px;
+    color: rgb(58, 58, 58);
+}
+
+#form #email > * {
+    margin: 0;
+}
+
+#form #submit {
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(170, 170, 170);
+    color: rgb(32, 32, 32);
+    width: 200px;
+    padding: 15px 0 8px 0;
+}
+
+#form > * {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* footer */
+
+@media (min-width: 1000px){
+    #footer {
+        width: 65%;
+        margin-top: 80px;
+        padding-top: 8px;
+        background-color: rgb(170, 170, 170);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgb(83, 83, 83);
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 1000px){
+    #footer {
+        width: 95%;
+        margin-top: 80px;
+        padding-top: 8px;
+        background-color: rgb(170, 170, 170);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgb(83, 83, 83);
+        border-radius: 3px;
+    }
+}
+
+
+#footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+#footer > * {
+    padding: 0 20px 0 20px;
+    margin: 12px 0 10px 0;
+}
+
+#footer a {
+    color: rgb(83, 83, 83);
+    font-weight: bold;
 }
