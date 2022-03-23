@@ -16,12 +16,12 @@
                 <p>Original Trombones</p>
             </div>
             <ul class="nav-links">
-                <!-- <input type="checkbox" class="side-menu" id="side-menu">
-                <label class="icon-label" for="side-menu">&#9776;</label> -->
-                <div class="menu">
-                    <li class="nav-link"><a href="#features">Features</a></li>
-                    <li class="nav-link"><a href="#how-it-works">How it works</a></li>
-                    <li class="nav-link"><a href="#pricing">Pricing</a></li>
+                <!-- <input type="checkbox" class="side-menu" id="side-menu"> -->
+                <a href="javascript:void(0);" class="icon">&#9776;</a>
+                <div id="menu" class="menu">
+                    <li class="nav-link"><a href="/#features">Features</a></li>
+                    <li class="nav-link"><a href="/#how-it-works">How it works</a></li>
+                    <li class="nav-link"><a href="/#pricing">Pricing</a></li>
                 </div>
             </ul>
         </nav>
@@ -62,7 +62,7 @@
         </section>
         <section id="how-it-works">
             <h1>How it works</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
         </section>
         <section id="pricing">
             <div class="price-card">
@@ -104,5 +104,16 @@
         </ul>
         <p>Copyright 2022. Build by <a href="https://github.com/gedadev" target="_blank">gedadev</a></p>
     </footer>
+    <script>
+        const menu = document.querySelector('.menu');
+        const icon = document.querySelector('.icon');
+        icon.addEventListener('click', () => {
+            if(menu.className === 'menu'){
+                menu.className += ' responsive';
+            } else {
+                menu.className = 'menu';
+            }
+        });
+    </script>
 </body>
 </html>
